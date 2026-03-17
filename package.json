@@ -19,6 +19,20 @@
             "description": "Lists all currently available Syncthing folders, along with their synchronization status.",
             "mode": "view",
             "subtitle": "All current folders"
+        },
+        {
+            "name": "recent-errors",
+            "title": "Recent Errors",
+            "description": "Displays recent errors from Syncthing",
+            "mode": "view",
+            "subtitle": "Recent errors from Syncthing"
+        },
+        {
+            "name": "recent-logs",
+            "title": "Recent Logs",
+            "description": "Displays recent logs from Syncthing",
+            "mode": "view",
+            "subtitle": "Recent logs from Syncthing"
         }
     ],
     "preferences": [
