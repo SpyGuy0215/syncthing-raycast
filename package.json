@@ -33,6 +33,20 @@
             "description": "Displays recent logs from Syncthing",
             "mode": "view",
             "subtitle": "Recent logs from Syncthing"
+        }, 
+        {
+            "name": "restart-syncthing",
+            "title": "Restart Syncthing",
+            "description": "Restarts the Syncthing service",
+            "mode": "no-view",
+            "subtitle": "Restart Syncthing"
+        },
+        {
+            "name": "update-syncthing",
+            "title": "Update Syncthing",
+            "description": "Checks for Syncthing updates and applies them if available",
+            "mode": "view", 
+            "subtitle": "Check for and apply Syncthing updates"
         }
     ],
     "preferences": [
@@ -75,6 +89,7 @@
     },
     "author": "shashank_prasanna",
     "platforms": [
+        "macOS",
         "Windows"
     ],
     "categories": [
