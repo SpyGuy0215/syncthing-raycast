@@ -2,7 +2,7 @@
     "$schema": "https://www.raycast.com/schemas/extension.json",
     "name": "syncthing",
     "title": "Syncthing",
-    "description": "Deep integration of Raycast into Syncthing.",
+    "description": "Deep integration of Raycast into Syncthing - monitor and control your Syncthing instance directly from Raycast.",
     "icon": "extension-icon.png",
     "license": "MIT",
     "commands": [
@@ -11,42 +11,42 @@
             "title": "List Devices",
             "description": "Lists all currently available Syncthing devices, along with their connection status.",
             "mode": "view",
-            "subtitle": "All current devices"
+            "subtitle": "Syncthing"
         },
         {
             "name": "list-folders",
             "title": "List Folders",
             "description": "Lists all currently available Syncthing folders, along with their synchronization status.",
             "mode": "view",
-            "subtitle": "All current folders"
+            "subtitle": "Syncthing"
         },
         {
             "name": "recent-errors",
-            "title": "Recent Errors",
+            "title": "Show Recent Errors",
             "description": "Displays recent errors from Syncthing",
             "mode": "view",
-            "subtitle": "Recent errors from Syncthing"
+            "subtitle": "Syncthing"
         },
         {
             "name": "recent-logs",
-            "title": "Recent Logs",
+            "title": "Show Recent Logs",
             "description": "Displays recent logs from Syncthing",
             "mode": "view",
-            "subtitle": "Recent logs from Syncthing"
+            "subtitle": "Syncthing"
         }, 
         {
             "name": "restart-syncthing",
             "title": "Restart Syncthing",
             "description": "Restarts the Syncthing service",
             "mode": "no-view",
-            "subtitle": "Restart Syncthing"
+            "subtitle": "Syncthing"
         },
         {
             "name": "update-syncthing",
             "title": "Update Syncthing",
             "description": "Checks for Syncthing updates and applies them if available",
             "mode": "view", 
-            "subtitle": "Check for and apply Syncthing updates"
+            "subtitle": "Syncthing"
         }
     ],
     "preferences": [

@@ -51,7 +51,6 @@ async function getFolders(
             headers,
         });
         const configData: any = await configRes.json();
-        console.log("Folders config data: ", configData);
 
         // Fetch status for each folder
         const folders: Folder[] = await Promise.all(
@@ -133,9 +132,10 @@ function getFolderTypeLabel(type: string): string {
 }
 
 function generateDetailMarkdown(folder: Folder): string {
-    const syncPercentage = folder.status.globalBytes > 0
-        ? ((folder.status.localBytes / folder.status.globalBytes) * 100).toFixed(2)
-        : "100.00";
+    console.log("Folder.status: ", folder.status);
+    const syncPercentage = folder.status.globalBytes > 0 
+    ?   ((folder.status.globalBytes - folder.status.needBytes) / folder.status.globalBytes * 100).toFixed(2)
+    :   "100.00";
 
     return `
 # ${folder.label}
@@ -143,6 +143,7 @@ function generateDetailMarkdown(folder: Folder): string {
 
 ## Status
 - **State**: ${folder.status.state}
+- **Progress**: ${syncPercentage}%
 - **Last State Change**: ${timestampToReadableTime(folder.status.stateChanged)}
 - **Type**: ${getFolderTypeLabel(folder.type)}
 
@@ -150,7 +151,6 @@ function generateDetailMarkdown(folder: Folder): string {
 \`${folder.path}\`
 
 ## Sync Status
-- **Progress**: ${syncPercentage}%
 - **Local**: ${formatBytes(folder.status.localBytes)} (${folder.status.localFiles} files)
 - **Global**: ${formatBytes(folder.status.globalBytes)} (${folder.status.globalFiles} files)
 - **Out of Sync**: ${formatBytes(folder.status.needBytes)} (${folder.status.needFiles} files)
